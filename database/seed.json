@@ -1,0 +1,46 @@
+{
+    "addresses": {
+        
+            "address0": {
+                "name": "Emmett 'Doc' Brown",
+                "street_address": "1640 Riverside Drive",
+                "city": "Hill Valley",
+                "state": "California"
+            },
+        
+            "address1": {
+                "name": "Jerry Seinfeld",
+                "street_address": "129 West 81st Street",
+                "city": "New York City",
+                "state": "New York"
+            },
+     
+            "address2": {
+                "name": "Danny Tanner",
+                "street_address": "1882 Gerard Street",
+                "city": "San Francisco",
+                "state": "California"
+            },
+   
+            "address3": {
+                "name": "Carrie Bradshaw",
+                "street_address": "245 East 73rd Street",
+                "city": "New York City",
+                "state": "New York"
+            },
+    
+            "address4": {
+                "name": "Lucy and Ricky Ricardo",
+                "street_address": "623 E. 68th Street",
+                "city": "Brooklyn",
+                "state": "New York"
+            },
+      
+            "address5": {
+                "name": "The Cunningham Family",
+                "street_address": "565 N. Clinton Drive",
+                "city": "Milwaukee",
+                "state": "Wisconsin"
+        }
+    }
+}

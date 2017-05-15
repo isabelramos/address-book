@@ -10,13 +10,34 @@
 
 	<body ng-app="AddressBookApp">
 
-		<div ng-controller="DomCtrl">
-			{{print}}
+		<div ng-controller="AddressCtrl">
+			
+			<div class="row">
+				<div class="col-xs-8 col-xs-offset-2">
+					<h3>Address Book</h3>
+					<input type="text" name="" placeholder="Search Address Book" ng-model="searchText">
+					<div ng-repeat="address in addresses | filter: searchText">
+		                <div class="panel panel-default">
+		                    <div class="panel-body">
+		                        <div class="col-xs-7">{{address.street_address}}</div>
+		                        <div class="col-xs-1 col-xs-offset-2">{{address.name}}</div>            
+		                        <div class="col-xs-1"><button class="btn btn-danger fa fa-trash-o"></button></div>
+		                    </div>
+		                </div>
+		           	</div>
+		        </div>
+		    </div>
+
+
+
 		</div>
 
+	<script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
 	<script type="text/javascript" src="./lib/bower_components/jquery/dist/jquery.js"></script>
 	<script type="text/javascript" src="./lib/bower_components/bootstrap/dist/js/bootstrap.js"></script>
 	<script type="text/javascript" src="./lib/bower_components/angular/angular.min.js"></script>
+	<script type="text/javascript" src="javascripts/app.js"></script>
+	<script type="text/javascript" src="javascripts/AppConstants.js"></script>
 	<script type="text/javascript" src="javascripts/main.js"></script>
 	</body>
 

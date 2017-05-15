@@ -1,5 +1,7 @@
-var app = angular.module("AddressBookApp", []);
+app.run((FIREBASE_CONFIG) => {
+  firebase.initializeApp(FIREBASE_CONFIG);
+});
 
-app.controller("DomCtrl", ($scope) => {
+app.controller("AddressCtrl", ($scope) => {
 	$scope.print = "blah.";
 });
