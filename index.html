@@ -11,22 +11,50 @@
 	<body ng-app="AddressBookApp">
 
 		<div ng-controller="AddressCtrl">
+
+			<div class="row">
+				<div class="col-xs-6 col-xs-offset-3">
+					<button class="col-xs-6 btn btn-warning" ng-click="newAddress()">Add Address</button>
+					<button class="col-xs-6 btn btn-info" ng-click="showAllAddresses()">Show All Addresses</button>
+				</div>
+			</div>
 			
 			<div class="row">
 				<div class="col-xs-8 col-xs-offset-2">
-					<h3>Address Book</h3>
-					<input type="text" name="" placeholder="Search Address Book" ng-model="searchText">
-					<div ng-repeat="address in addresses | filter: searchText">
-		                <div class="panel panel-default">
-		                    <div class="panel-body">
-		                        <div class="col-xs-7">{{address.street_address}}</div>
-		                        <div class="col-xs-1 col-xs-offset-2">{{address.name}}</div>            
-		                        <div class="col-xs-1"><button class="btn btn-danger fa fa-trash-o"></button></div>
-		                    </div>
-		                </div>
-		           	</div>
-		        </div>
-		    </div>
+
+					<div ng-show="!showListView">
+						<h3>Add Address</h3>
+							<form>
+                                <div class="form-group">
+                                    <label>Enter Street Address</label>
+                                    <input type="text" class="form-control" placeholder="123 Main Street" ng-model="addedAddress.street_address"/>
+                                </div>
+                                <div class="form-group">
+                                    <label>Name</label>
+                                    <input type="text" class="form-control" placeholder="Jane Doe" ng-model="addedAddress.name"/>
+                                </div>
+                                <button class="btn btn-default" ng-click="addNewAddress()">Submit</button>
+                            </form>
+					</div>
+
+
+
+					<div ng-show="showListView">
+						<h3>Address Book</h3>
+						<input type="text" name="" placeholder="Search Address Book" ng-model="searchText">
+						<div ng-repeat="address in addresses | filter: searchText">
+					        <div class="panel panel-default">
+					            <div class="panel-body">
+					                <div class="col-xs-8">{{address.street_address}}</div>
+					                <div class="col-xs-3">{{address.name}}</div>            
+					                <div class="col-xs-1"><button class="btn btn-danger fa fa-trash-o"></button></div>
+					            </div>
+					        </div>
+					    </div>
+					</div>
+		
+				</div>
+			</div>
 
 
 
