@@ -3,10 +3,9 @@ app.controller("AddressNewCtrl", function($http, $location, $q, $scope, FIREBASE
 	$scope.addNewAddress = () => {
 		$scope.addedAddress.city = "Nashville";
 		$scope.addedAddress.state = "Tennessee";
-    	postNewAddress($scope.addedAddress).then(() => {
+    	AddressFactory.postNewAddress($scope.addedAddress).then(() => {
       	$scope.addedAddress = {};
-      	$scope.showListView = true;
-    	getAddresses();
+        $location.url("/address/list");
     	}).catch((error) => {
      		console.log("add error", error);
    		});
