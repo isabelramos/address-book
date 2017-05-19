@@ -1,0 +1,11 @@
+<h3>Address Book</h3>
+<input type="text" name="" placeholder="Search Address Book" ng-model="searchText">
+<div ng-repeat="address in addresses | filter: searchText">
+	<div class="panel panel-default">
+		<div class="panel-body">
+			<div class="col-xs-8">{{address.street_address}}</div>
+			<div class="col-xs-3">{{address.name}}</div>            
+			<div class="col-xs-1"><button class="btn btn-danger fa fa-trash-o"></button></div>
+		</div>
+	</div>
+</div>
