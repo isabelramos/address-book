@@ -3,7 +3,8 @@
       <img src="{{selectedAddress.photo}}">
       <div class="caption">
         <h3>{{selectedAddress.name}}</h3>
-        <p>{{selectedAddress.street_address}}</p>
+        <p>{{selectedAddress.street_address}}<br>{{selectedAddress.city}}, {{selectedAddress.state}}</p>
+        <a ng-href="#!/address/edit/{{selectedAddress.id}}"><button class="btn btn-info">Edit</button></a>
       </div>
     </div>
 </div>

@@ -40,8 +40,28 @@ app.factory("AddressFactory", function($http, $q, FIREBASE_CONFIG) {
     });
   };
 
+  let editAddress = (address) => {
+    return $q ((resolve, reject) => {
+      $http.put(`${FIREBASE_CONFIG.databaseURL}/addresses/${address.id}.json`, 
+        JSON.stringify({
+          name: address.name,
+          street_address: address.street_address,
+          city: address.city,
+          state: address.state,
+          photo: address.photo
+      })
+      ).then((results) => {
+          resolve(results);
+      }).catch((error) => {
+          reject(error);
+        });
+    });
+  };
 
-return {getAddressList:getAddressList, postNewAddress:postNewAddress, getSingleAddress:getSingleAddress};
+
+
+
+return {getAddressList:getAddressList, postNewAddress:postNewAddress, getSingleAddress:getSingleAddress, editAddress:editAddress};
 
 
 });
