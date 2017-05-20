@@ -1,4 +1,4 @@
-app.controller("AddressViewCtrl", function($location, $routeParams, $scope, AddressFactory) {
+app.controller("AddressViewCtrl", function($routeParams, $scope, AddressFactory) {
 
   $scope.selectedAddress = {};
 

@@ -5,7 +5,7 @@
 		<div class="panel-body">
 			<div class="col-xs-8"><a ng-href="#!/address/view/{{address.id}}">{{address.street_address}}</a></div>
 			<div class="col-xs-3">{{address.name}}</div>            
-			<div class="col-xs-1"><button class="btn btn-danger fa fa-trash-o"></button></div>
+			<div class="col-xs-1"><button class="btn btn-danger fa fa-trash-o" ng-click="deleteAddress(address.id)"></button></div>
 		</div>
 	</div>
 </div>
