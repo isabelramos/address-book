@@ -1,5 +1,4 @@
 app.controller("AuthCtrl", function($location, $rootScope, $scope, AuthFactory, UserFactory) {
-	$scope.alerts = [];
 	$scope.auth = {
 		email: "i@i.com",
 		password: "123456"
