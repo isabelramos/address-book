@@ -1,3 +1,10 @@
+<div class="row">
+	<div class="col-xs-6 col-xs-offset-3">
+		<a href="#!/address/new"><button class="col-xs-6 btn btn-warning">Add Address</button></a>
+		<a href="#!/address/list"><button class="col-xs-6 btn btn-info">All Addresses</button></a>
+	</div>
+</div>
+
 <h3>Address Book</h3>
 <input type="text" name="" placeholder="Search Address Book" ng-model="searchText">
 <div ng-repeat="address in addresses | filter: searchText">

@@ -1,9 +1,10 @@
-app.controller("AddressListCtrl", function($scope, AddressFactory) {
+app.controller("AddressListCtrl", function($rootScope, $scope, AddressFactory) {
 	$scope.addresses = [];
 
 	let getAddresses = () => {
-    	AddressFactory.getAddressList().then((addressez) => {
+    	AddressFactory.getAddressList($rootScope.user.uid).then((addressez) => {
     		$scope.addresses = addressez;
+            console.log(addressez);
     	}).catch((error) => {
       		console.log("error", error);
     	});

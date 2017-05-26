@@ -1,9 +1,9 @@
 app.factory("AddressFactory", function($http, $q, FIREBASE_CONFIG) {
 
-	let getAddressList = () => {
+	let getAddressList = (userId) => {
 		let addressez = [];
 		return $q ((resolve, reject) => {
-    		$http.get(`${FIREBASE_CONFIG.databaseURL}/addresses.json`)
+    		$http.get(`${FIREBASE_CONFIG.databaseURL}/addresses.json?orderBy="uid"&equalTo="${userId}"`)
     		.then((firebaseItems) => {
           let itemCollection = firebaseItems.data;
           if (itemCollection !== null) {
@@ -50,7 +50,8 @@ app.factory("AddressFactory", function($http, $q, FIREBASE_CONFIG) {
           street_address: address.street_address,
           city: address.city,
           state: address.state,
-          photo: address.photo
+          photo: address.photo,
+          uid: address.uid
       })
       ).then((results) => {
           resolve(results);
