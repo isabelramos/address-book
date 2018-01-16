@@ -1,0 +1,59 @@
+{
+    "addresses": {
+        
+            "address0": {
+                "name": "Emmett 'Doc' Brown",
+                "street_address": "1640 Riverside Drive",
+                "city": "Hill Valley",
+                "state": "California",
+                "photo": "http://overmental.com/wp-content/uploads/2015/09/Back-to-the-Future-Doc-Brown-790x369.jpg",
+                "uid": "gCIMipGNWrXptoBkEJvTDtf2PN22"
+            },
+        
+            "address1": {
+                "name": "Jerry Seinfeld",
+                "street_address": "129 West 81st Street",
+                "city": "New York City",
+                "state": "New York",
+                "photo": "http://68.media.tumblr.com/9857d99c4a20f5901aea89abe2236c50/tumblr_inline_n9ik63jfRs1qikdr9.jpg",
+                "uid": "g8pP2GLw2ievwVVrMYih42XZVwl2"
+            },
+     
+            "address2": {
+                "name": "Danny Tanner",
+                "street_address": "1882 Gerard Street",
+                "city": "San Francisco",
+                "state": "California",
+                "photo": "http://time.pinnion.com/pepl/image_store/d/1/c/9/cqf-a2um0chi8t6ze6z_Rnn9je2R_.png",
+                "uid": "g8pP2GLw2ievwVVrMYih42XZVwl2"
+            },
+   
+            "address3": {
+                "name": "Carrie Bradshaw",
+                "street_address": "245 East 73rd Street",
+                "city": "New York City",
+                "state": "New York",
+                "photo": "https://upload.wikimedia.org/wikipedia/en/3/34/Carrie_Bradshaw_opening_credits.jpg",
+                "uid": "gCIMipGNWrXptoBkEJvTDtf2PN22"
+            },
+    
+            "address4": {
+                "name": "Lucy and Ricky Ricardo",
+                "street_address": "623 E. 68th Street",
+                "city": "Brooklyn",
+                "state": "New York",
+                "photo": "https://www.biography.com/.image/t_share/MTI4ODUzOTA2NTUyODQ0MjU4/lucille-ball-desi-arnazjpg.jpg",
+                "uid": "gCIMipGNWrXptoBkEJvTDtf2PN22"
+        }
+    },
+    "users" : {
+        "user0": {
+            "uid": "g8pP2GLw2ievwVVrMYih42XZVwl2",
+            "username": "b"
+        },
+        "user1": {
+            "uid": "gCIMipGNWrXptoBkEJvTDtf2PN22",
+            "username": "i"
+        }
+    }
+}
